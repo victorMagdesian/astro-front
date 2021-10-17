@@ -1,5 +1,8 @@
 <template>
-  <NuxtLink :to="link" class="flex flex-col items-center justify-center my-4 text-white icon">
+  <NuxtLink
+    :to="link"
+    class="flex flex-col items-center justify-center my-4 text-white hover:text-blue-500"
+  >
     <img v-if="icon" :src="require(`~/assets/icons/Icon_${icon}.svg`)" alt />
     <span>{{ name }}</span>
   </NuxtLink>
@@ -18,11 +21,3 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
-.icon:hover {
-  color: blue;
-  fill: aqua;
-  stroke: aqua;
-  stroke: blue;
-}
-</style>
