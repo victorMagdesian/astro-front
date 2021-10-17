@@ -6,7 +6,7 @@
     </div>
     <div class="flex justify-end space-x-2 w-1/2">
       <input
-        class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:ring w-full"
+        class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:ring w-full"
         type="text"
         :hidden="SearchHidden"
       />
