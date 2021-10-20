@@ -1,7 +1,7 @@
 <template>
-  <div class="hover:text-blue-600 text-white" @mouseover="Hover(true)" @mouseleave="Hover(false)">
+  <div class="hover:text-astro-blue-1 text-astro-white-3" @mouseover="Hover(true)" @mouseleave="Hover(false)">
     <NuxtLink
-      exact-active-class="text-blue-600"
+      exact-active-class="text-astro-blue-1"
       :to="link"
       class="flex flex-col items-center justify-center my-4"
     >

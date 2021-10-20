@@ -4,6 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-a-bg;
+    @apply bg-astro-bg;
+    background-image: url("../images/dotgrid.svg");
   }
 }

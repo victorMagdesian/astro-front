@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center px-9 space-x-11">
+  <div class="flex items-center bg-astro-dark-1 bg-opacity-80  px-9 space-x-11">
     <img :src="require(`~/assets/icons/Icon_notificacao.svg`)" alt />
     <div>
       <span class="block">_10/nov</span>
