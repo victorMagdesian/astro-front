@@ -11,9 +11,9 @@
         :hidden="SearchHidden"
       />
       <img
-        @click="SearchHidden = !SearchHidden"
         :src="require(`~/assets/icons/Icon_search.svg`)"
         alt
+        @click="SearchHidden = !SearchHidden"
       />
     </div>
   </div>
@@ -28,9 +28,6 @@ export default Vue.extend({
     return {
       SearchHidden: true
     }
-  },
+  }
 })
 </script>
-
-<style scoped>
-</style>

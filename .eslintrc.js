@@ -8,8 +8,10 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended'
   ],
-  plugins: [
-  ],
+  plugins: [],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'space-before-function-paren': 'off',
+    'vue/html-self-closing': 'off'
+  }
 }
