@@ -1,18 +1,20 @@
 <template>
   <div class="flex items-center bg-astro-dark-1 bg-opacity-80  px-9 space-x-11">
-    <img :src="require(`~/assets/icons/Icon_notificacao.svg`)" alt />
-    <div>
-      <span class="block">_10/nov</span>
-      <h2 class="text-xl">O prazo de finalizar o curso esta acabando</h2>
-    </div>
+    <Icon name="notificacao" />
+    <NotificationItem />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
+import NotificationItem from "../molecules/NotificationItem.vue";
+import Icon from "../atoms/Icon.vue";
 
 export default Vue.extend({
-  name: 'Notification'
-})
+  name: "Notification",
+  components: {
+    Icon,
+    NotificationItem
+  }
+});
 </script>
-
