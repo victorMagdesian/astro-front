@@ -6,15 +6,15 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import NotificationItem from "../molecules/NotificationItem.vue";
-import Icon from "../atoms/Icon.vue";
+import Vue from 'vue'
+import NotificationItem from '../molecules/NotificationItem.vue'
+import Icon from '../atoms/Icon.vue'
 
 export default Vue.extend({
-  name: "Notification",
+  name: 'Notification',
   components: {
     Icon,
     NotificationItem
   }
-});
+})
 </script>

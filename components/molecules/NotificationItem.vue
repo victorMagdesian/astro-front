@@ -9,15 +9,15 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import SpanLabel from "../atoms/SpanLabel.vue";
-import H2Label from "../atoms/H2Label.vue";
+import Vue from 'vue'
+import SpanLabel from '../atoms/SpanLabel.vue'
+import H2Label from '../atoms/H2Label.vue'
 
 export default Vue.extend({
-  name: "NotificationItem",
+  name: 'NotificationItem',
   components: {
     H2Label,
     SpanLabel
   }
-});
+})
 </script>

@@ -1,14 +1,12 @@
 <template>
-  <div v-on:mouseover="hovered = true" v-on:mouseleave="hovered = false">
-
+  <div @mouseover="hovered = true" @mouseleave="hovered = false">
     <NuxtLink
-      v-if="hovered || $route.path == link" 
+      v-if="hovered || $route.path == link"
       exact-active-class="text-astro-blue-1"
       :to="link"
-      class="flex flex-col items-center justify-center my-4"
-      
+      class="flex flex-col items-center justify-center my-1"
     >
-      <Icon :name="iconHovered"/>
+      <Icon :name="iconHovered" />
       <SpanLabel :name="name" _class="text-astro-blue-1" />
     </NuxtLink>
 
@@ -16,43 +14,38 @@
       v-else
       exact-active-class="text-astro-blue-1"
       :to="link"
-      class="flex flex-col items-center justify-center my-4"
-      
+      class="flex flex-col items-center justify-center my-1"
     >
-      <Icon  :name="icon" />
-      <SpanLabel :name="name"  />
+      <Icon :name="icon" />
+      <SpanLabel :name="name" />
     </NuxtLink>
-    
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Icon from "../atoms/Icon.vue";
-import SpanLabel from "../atoms/SpanLabel.vue";
-
-
+import Vue from 'vue'
+import Icon from '../atoms/Icon.vue'
+import SpanLabel from '../atoms/SpanLabel.vue'
 
 export default Vue.extend({
-  name: "MenuItem",
+  name: 'MenuItem',
+  components: {
+    Icon,
+    SpanLabel
+  },
   props: {
     icon: { type: String, required: true },
     name: { type: String, required: true },
     link: { type: String, required: true }
   },
-    data() {
-      return {
-         iconHovered: this.icon + "_hover",
-         hovered: false,
-         now: false
-      }
+  data() {
+    return {
+      iconHovered: this.icon + '_hover',
+      hovered: false,
+      now: false
     }
-  ,
-  components: {
-    Icon,
-    SpanLabel
   }
- 
+
   // ,
   // data() {
   //   return {
@@ -85,5 +78,5 @@ export default Vue.extend({
   //     }
   //   }
   // }
-});
+})
 </script>

@@ -3,13 +3,13 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "SpanLabel",
+  name: 'SpanLabel',
   props: {
     name: { type: String, required: true },
     _class: { type: String, required: false }
   }
-});
+})
 </script>

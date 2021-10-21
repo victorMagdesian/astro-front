@@ -7,12 +7,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "Icon",
+  name: 'Icon',
   props: {
     name: { type: String, required: true }
   }
-});
+})
 </script>
