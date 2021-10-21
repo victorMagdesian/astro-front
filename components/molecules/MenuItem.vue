@@ -1,56 +1,89 @@
 <template>
-  <div class="hover:text-astro-blue-1 text-astro-white-3" @mouseover="Hover(true)" @mouseleave="Hover(false)">
+  <div v-on:mouseover="hovered = true" v-on:mouseleave="hovered = false">
+
     <NuxtLink
+      v-if="hovered || $route.path == link" 
       exact-active-class="text-astro-blue-1"
       :to="link"
       class="flex flex-col items-center justify-center my-4"
+      
     >
-      <img :src="atualIcon" />
-      <span>{{ name }}</span>
+      <Icon :name="iconHovered"/>
+      <SpanLabel :name="name" _class="text-astro-blue-1" />
     </NuxtLink>
+
+    <NuxtLink
+      v-else
+      exact-active-class="text-astro-blue-1"
+      :to="link"
+      class="flex flex-col items-center justify-center my-4"
+      
+    >
+      <Icon  :name="icon" />
+      <SpanLabel :name="name"  />
+    </NuxtLink>
+    
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
+import Icon from "../atoms/Icon.vue";
+import SpanLabel from "../atoms/SpanLabel.vue";
+
+
 
 export default Vue.extend({
-  name: 'MenuItem',
+  name: "MenuItem",
   props: {
     icon: { type: String, required: true },
     name: { type: String, required: true },
     link: { type: String, required: true }
   },
-  data() {
-    return {
-      atualIcon: '',
-      Icon: require(`~/assets/icons/Icon_${this.icon}.svg`),
-      IconHover: require(`~/assets/icons/Icon_${this.icon}_hover.svg`),
-      path: window.location.pathname
-    }
-  },
-  beforeMount() {
-    this.GetIcon()
-  },
-  methods: {
-    Hover(val: boolean) {
-      if (this.$route.path === this.link) {
-        return
-      }
-      if (val) {
-        this.atualIcon = this.IconHover
-      }
-      if (!val) {
-        this.atualIcon = this.Icon
-      }
-    },
-    GetIcon() {
-      if (this.path === this.link) {
-        this.atualIcon = this.IconHover
-      } else {
-        this.atualIcon = this.Icon
+    data() {
+      return {
+         iconHovered: this.icon + "_hover",
+         hovered: false,
+         now: false
       }
     }
+  ,
+  components: {
+    Icon,
+    SpanLabel
   }
-})
+ 
+  // ,
+  // data() {
+  //   return {
+  //     atualIcon: "",
+  //     Icon: require(`~/assets/icons/Icon_${this.icon}.svg`),
+  //     IconHover: require(`~/assets/icons/Icon_${this.icon}_hover.svg`),
+  //     path: window.location.pathname
+  //   };
+  // },
+  // beforeMount() {
+  //   this.GetIcon();
+  // },
+  // methods: {
+  //   Hover(val: boolean) {
+  //     if (this.$route.path === this.link) {
+  //       return;
+  //     }
+  //     if (val) {
+  //       this.atualIcon = this.IconHover;
+  //     }
+  //     if (!val) {
+  //       this.atualIcon = this.Icon;
+  //     }
+  //   },
+  //   GetIcon() {
+  //     if (this.path === this.link) {
+  //       this.atualIcon = this.IconHover;
+  //     } else {
+  //       this.atualIcon = this.Icon;
+  //     }
+  //   }
+  // }
+});
 </script>
