@@ -1,5 +1,5 @@
 <template>
-  <div @mouseover="hovered = true" @mouseleave="hovered = false">
+  <div class="my-3" @mouseover="hovered = true" @mouseleave="hovered = false">
     <NuxtLink
       v-if="hovered || $route.path == link"
       exact-active-class="text-astro-blue-1"
@@ -7,7 +7,7 @@
       class="flex flex-col items-center justify-center my-1"
     >
       <Icon :name="iconHovered" />
-      <SpanLabel :name="name" _class="text-astro-blue-1" />
+      <SpanLabel :name="name" clazz="text-astro-blue-1" />
     </NuxtLink>
 
     <NuxtLink
@@ -24,15 +24,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Icon from '../atoms/Icon.vue'
-import SpanLabel from '../atoms/SpanLabel.vue'
 
 export default Vue.extend({
   name: 'MenuItem',
-  components: {
-    Icon,
-    SpanLabel
-  },
+
   props: {
     icon: { type: String, required: true },
     name: { type: String, required: true },

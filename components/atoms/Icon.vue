@@ -2,7 +2,6 @@
   <img
     :src="require(`~/assets/icons/Icon_${name}.svg`)"
     alt
-    class="mt-8 mb-6"
   />
 </template>
 

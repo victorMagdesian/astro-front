@@ -4,7 +4,7 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
+    './nuxt.config.{js,ts}'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -18,7 +18,7 @@ module.exports = {
             3: '#DEE1E4',
             4: '#CFD3D8',
             5: '#BFC4CB',
-            6: '#ADB4BD',
+            6: '#ADB4BD'
           },
           gray: {
             1: '#808A98',
@@ -32,7 +32,7 @@ module.exports = {
             2: '#1F2528',
             4: '#1D2025',
             3: '#1D1B27',
-            5: '#02050A',
+            5: '#02050A'
           },
           blue: {
             1: '#0760E0',
@@ -53,7 +53,10 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    scrollbar: ['dark']
   },
-  plugins: [],
+  plugins: [
+    // ...
+    require('tailwind-scrollbar')
+  ]
 }

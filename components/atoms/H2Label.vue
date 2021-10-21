@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-astro-white-3" :class="_class">
+  <h2 class="text-astro-white-3" :class="clazz">
     {{ name }}
   </h2>
 </template>
@@ -11,7 +11,7 @@ export default Vue.extend({
   name: 'H2Label',
   props: {
     name: { type: String, required: true },
-    _class: { type: String, required: false }
+    clazz: { type: String, default: '', required: false }
   }
 })
 </script>

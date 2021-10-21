@@ -1,8 +1,8 @@
 <template>
   <nav
-    class="w-28 flex flex-col items-center bg-astro-dark-1 bg-opacity-80 ml-10 h-screen"
+    class="w-28 flex flex-col items-center border-2 border-astro-dark-1 border-opacity-25 bg-astro-dark-1 bg-opacity-80 ml-10 min-h-screen max-h-full"
   >
-    <Icon name="logo" />
+    <Icon class="mt-8 mb-16" name="logo" />
     <MenuItem icon="home" name="Dashboard" link="/" />
     <MenuItem icon="formacao" name="Formação" link="/formacao" />
     <MenuItem icon="recursos" name="Recursos" link="/recursos" />
@@ -14,15 +14,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Icon from '../atoms/Icon.vue'
-import MenuItem from '~/components/molecules/MenuItem.vue'
 
 export default Vue.extend({
-  name: 'Menu',
-  components: {
-    Icon,
-    MenuItem
-  }
+  name: 'Menu'
 })
 </script>
 

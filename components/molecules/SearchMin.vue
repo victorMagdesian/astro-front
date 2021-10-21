@@ -6,6 +6,7 @@
       :hidden="SearchHidden"
     />
     <img
+      style="cursor: pointer"
       :src="require(`~/assets/icons/Icon_search.svg`)"
       alt
       @click="SearchHidden = !SearchHidden"
@@ -18,8 +19,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'HeaderSearch',
-  components: {
-  },
+
   data() {
     return {
       SearchHidden: true
