@@ -1,7 +1,14 @@
 <template>
   <div class="flex justify-between p-5 space-x-5">
     <div class="flex w-full flex-col space-y-5">
-      <CurrentFormation />
+      <CurrentFormation
+        name="[backend: C# .NET]"
+        :last-fase="5"
+        :current-fase="2"
+        name-course="Dominando ASP.NET Core"
+        :last-course="10"
+        :current-course="2"
+      />
       <CurrenteChallenge />
       <CardNewsletters />
     </div>
