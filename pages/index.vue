@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between p-5 space-x-5">
     <div class="flex w-full flex-col space-y-5">
-      <CurrentFormation
+      <CardCurrentFormation
         name="[backend: C# .NET]"
         :last-fase="5"
         :current-fase="2"
@@ -9,10 +9,13 @@
         :last-course="10"
         :current-course="2"
       />
-      <CurrenteChallenge />
+      <CardCurrenteChallenge
+        name="CASA DO CÓDIGO"
+        :number="1"
+      />
       <CardNewsletters />
     </div>
-    <div class="flex w-full flex-col space-y-5">
+    <div class="flex w-full flex-col space-y-12">
       <CardCourses />
       <div class="flex space-x-2">
         <CardAchivement />
