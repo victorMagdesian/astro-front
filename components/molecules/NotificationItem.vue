@@ -1,6 +1,6 @@
 <template>
   <div class="w-1/2">
-    <SpanLabel clazz="block text-xs" name="_10/NOV" />
+    <SpanLabel class="block text-xs" name="_10/NOV" />
     <H2Label
       class="text-xl"
       name="O prazo de finalizar o curso esta acabando"
@@ -12,7 +12,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'NotificationItem'
 
 })
 </script>

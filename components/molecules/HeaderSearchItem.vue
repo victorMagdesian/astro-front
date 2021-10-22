@@ -1,7 +1,7 @@
 <template>
   <div class="w-1/2">
-    <H2Label name="Olá Leandro" clazz="text-2xl" />
-    <SpanLabel name="//BACKEND_DEVELOPER" clazz="text-xs" />
+    <H2Label name="Olá Leandro" class="text-2xl" />
+    <SpanLabel name="//BACKEND_DEVELOPER" class="text-xs" />
   </div>
 </template>
 
@@ -9,7 +9,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'HeaderSearchItem'
 
 })
 </script>

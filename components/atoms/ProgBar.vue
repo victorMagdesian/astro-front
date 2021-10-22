@@ -10,7 +10,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ProgBar',
+
   props: {
     perCent: { type: Number, required: true }
   }

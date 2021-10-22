@@ -1,16 +1,20 @@
 <template>
-  <div class="flex p-5 space-x-5">
+  <div class="flex justify-between p-5 space-x-5">
     <div class="flex w-full flex-col space-y-5">
       <CurrentFormation />
       <CurrenteChallenge />
-      <Newsletter />
+      <CardNewsletters />
     </div>
     <div class="flex w-full flex-col space-y-5">
-      <CurrentFormation />
-      <CurrenteChallenge />
+      <CardCourses />
+      <div class="flex space-x-2">
+        <CardAchivement />
+        <CardMoreFormations />
+      </div>
     </div>
     <div class="flex w-full flex-col space-y-5">
-      <CurrentFormation />
+      <CardCalendar />
+      <CardWeek />
     </div>
   </div>
 </template>

@@ -7,7 +7,7 @@
       class="flex flex-col items-center justify-center my-1"
     >
       <Icon :name="iconHovered" />
-      <SpanLabel :name="name" clazz="text-astro-blue-1" />
+      <SpanLabel :name="name" class="text-astro-blue-1" />
     </NuxtLink>
 
     <NuxtLink
@@ -26,7 +26,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'MenuItem',
 
   props: {
     icon: { type: String, required: true },

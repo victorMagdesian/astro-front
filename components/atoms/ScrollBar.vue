@@ -8,7 +8,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ScrollBar',
+
   props: {
     perCent: { type: Number, required: true }
   }
