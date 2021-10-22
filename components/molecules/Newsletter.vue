@@ -6,9 +6,12 @@
     </div>
     <ScrollBar>
       <div class="flex flex-col space-y-2 mr-2">
-        <CardNewsletterTopic />
-        <CardNewsletterTopic />
-        <CardNewsletterTopic />
+        <CardNewsletterTopic
+          date="03/NOV"
+          description="Título do tech talk aqui dummy do título porque o título geralmente é grande"
+          author="Leandro Cardoso"
+          :tags="['AZURE','VUE','NUXT','PYTHON']"
+        />
       </div>
     </ScrollBar>
   </div>
@@ -19,10 +22,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   props: {
-    name: { type: String, required: true },
-    topic: {
-
-    }
+    name: { type: String, required: true }
   }
 })
 </script>
