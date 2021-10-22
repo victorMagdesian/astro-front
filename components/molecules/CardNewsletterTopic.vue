@@ -5,8 +5,12 @@
       <SpanLabel :name="description" />
       <SpanLabel :name="`por ${author}`" />
     </div>
-    <div class="flex w-48 justify-between flex-wrap">
-      <Tag v-for="tag in tags" :name="tag" />
+    <div class="flex w-48 flex-wrap">
+      <Tag
+        v-for="tag in tags"
+        class="border-l-2 border-r-2 border-astro-gray-3"
+        :name="tag"
+      />
     </div>
   </div>
 </template>
